@@ -1,0 +1,46 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+
+<style>
+    .hero {
+        background-image: url('{% static "img/me.png" %}');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        filter: drop-shadow(5px 5px 5px rgb(22, 85, 187));
+    }
+
+    .hero-text {
+        font-size: 5rem;
+        font-weight: bolder;
+        color: white;
+        line-height: 5rem;
+        transition: all .2s ease-in-out;
+    }
+
+    .hero-text:hover {
+        color: #00bcd4;
+    }
+</style>
+
+{% endblock css %}
+
+
+{% block body %}
+<div class="container-fluid hero vh-100">
+    <div class="row vh-100">
+        <div class="col-6 offset-md-5 hero-text my-auto">
+            <h2>Hello i am Meghan</h2>
+            <p>
+                I am a full stack developer
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+
+{% block js %}
+
+{% endblock js %}
