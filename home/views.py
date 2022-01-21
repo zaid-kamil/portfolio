@@ -7,12 +7,19 @@ def home(request):
     ctx = {
         'skill_list': skill_list,
         'project_list': project_list,
-        'title': 'Home',       
+        'title': 'Home', 
+        'hactive':'class=active',     
     }
     return render(request, 'home.html',context=ctx)
 
 def about(request):
-    return render(request, 'about.html')
+    ctx = {
+         'aactive':'class=active',  
+    }
+    return render(request, 'about.html',context=ctx)
 
 def contact(request):
-    return render(request, 'contact.html')
+    ctx={
+         'cactive':'class=active',  
+    }
+    return render(request, 'contact.html',context=ctx)
